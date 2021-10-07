@@ -18,6 +18,7 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 *  Java
 *  Javalin
 *  Hibernate
+*  Maven
 
 ## Features
 
@@ -29,10 +30,22 @@ List of features ready and TODOs for future development
 
 
 To-do list:
-* 
+* Implement Spring Framework
+* Implement Angular Framework
 
 ## Getting Started
-   
+* Create a AWS account
+* Download:
+   - MariaDB
+   - Eclipse
+   - Postman
+   - Javalin
+   - Maven
+* Start a Maven Project in Eclipse
+   - Create Models Package
+   - Create 
+* Create a connection to MariaDB
+  -Create Tables
    
   -------------------------
 (include git clone command)
