@@ -1,0 +1,43 @@
+<!Doctype html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="Styles/Login.css">
+    </head>
+    <body>
+    <div class="container">
+        <h2 style ="text-align: center;">Welcome to the PokeMart Portal!</h2>
+  
+        <form id = login_form method = "POST" action="http://localhost:8000/verifyEmployee">
+            <div class = "row">
+               <div class = "col">
+                    <h2>Log in</h2>
+                    <p>Please input your PokeMart Email and Password!</p>
+
+               </div>
+
+                <div id = "login" class="col">
+                
+                    <input type="text" placeholder="pokeEmail" name="pokeEmail" required>
+                    <input type="text" placeholder="password" name="password" required>
+                    <input type = "submit" value="Login">
+                
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class= "button-shell">
+        <div class="row">
+            <div class = "col">
+                <a href = "#" style="color:black" class="btn">Sign up</a>
+            </div>
+            <div class="col">
+                <a href="#" style="color:black" class="btn">Forgot password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

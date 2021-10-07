@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Styles/ManagerPage.css">
+    </head>
+
+    <body>
+        <h1>Welcome PokeMart Manager!</h1>
+
+        <h2>Reimbursement Table</h2>
+        <div id="table">
+            <table id="reimbursement_table">
+                <tr class="reim_header">
+                    <th>Claim Id</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Poke id</th>
+                </tr>
+    
+            </table>
+            
+            
+        </div>
+
+        <h2>Reimbursement Update Form</h2>
+            <form id = "update_reimbursement" method = "POST" action = "http://localhost:8000/updateReimbursement">
+                <input id="id" type = "text" placeholder="Claim Id" required name ="claimId"/>
+                <input id="status" type = "text" placeholder="Status Change" required name = "status_name"/>
+                <input id="submit" type="submit" placeholder="Submit Update" required/>
+            </form>
+            
+            <form method="POST" action="http://localhost:8000/logOut">
+                <label class="Logout">
+                    <input type="submit" id="log_out" value="logout">
+                </label>
+            </form>
+
+
+
+        <script src = "Scripts/ManagerAjax.js"></script>
+    </body>
+</html>

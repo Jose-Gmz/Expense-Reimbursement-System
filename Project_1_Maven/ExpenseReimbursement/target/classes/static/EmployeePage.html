@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href = "Styles/EmployeePage.css">
+    </head>
+    <h1>Welcome PokeMart Employee!</h1>
+    <!--Reimbursement form for employees-->
+    <body>
+       <h2>Please enter a reimbursement claim here</h2>
+       <div id="reimbursement_submission">
+       <form id=reimbursement_form method = "POST" action = "http://localhost:8000/newReimbursement">
+           <input id = "des" type="text" placeholder = "Description" required name = "description"/>
+           <input id = "amount" type="text" placeholder = "The total amount of claim" required name = "amount"/>
+           <input id= "submit" type="submit" placeholder = "Submit Reimbursement Claim" required />
+           
+       </form>
+    </div>
+    
+    <h2>Reimbursement Claims</h2>
+    <div id = "Table_container">
+        <table id = "employee_table">
+            <tr class="reim_header">
+                <th>Claim Id</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+
+    <form method="POST" action="http://localhost:8000/logOut">
+        <label class="Logout">
+            <input type="submit" id="log_out" value="logout">
+        </label>
+    </form>
+    
+    <script src="Scripts/EmployeeAjax.js"></script>
+    </body>
+</html>

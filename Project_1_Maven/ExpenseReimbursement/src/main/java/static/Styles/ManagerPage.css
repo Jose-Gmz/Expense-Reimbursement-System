@@ -1,0 +1,56 @@
+table,th{
+    width: auto;
+    border: 3px solid rgba(11, 11, 121, 0.89);
+    background-color: white;
+    
+}
+
+td{
+    width: auto;
+    border: 3px solid orange;
+}
+
+body{
+    background-color: rgba(219, 235, 245, 0.89);
+}
+
+h2,h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+#reimbursement_table{
+    margin: auto;
+    width: 40%;
+    border: 3px solid rgba(11, 11, 121, 0.89);
+    padding: 10px;
+}
+
+#update_reimbursement{
+    margin: auto;
+    width: 40%;
+    border: 3px solid rgba(11, 11, 121, 0.89);
+    padding: 10px;
+    display: flex;
+    justify-content:space-evenly; 
+}
+
+#status , #id{
+    margin: auto;
+    width: 50%;
+    border: 1px solid orange;
+    padding: 10px;
+}
+
+#submit{
+    border: 2px solid black;
+}
+
+.Logout{
+    margin: auto;
+    position: fixed ;
+    right:10px;
+    top:10px;
+}
