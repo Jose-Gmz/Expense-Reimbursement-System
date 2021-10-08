@@ -115,7 +115,10 @@ if (sessionFactory == null) {
    - Create end points.
 * Implement a front end with HTML,CSS and JavaScript.
 * Use Ajax to create XMLHttpRequests and utilizing javalin.
-`    let url = 'http://localhost:8000/getAllReimbursements'
 
-    let xhr = new XMLHttpRequest()
+`    let url = 'http://localhost:8000/getAllReimbursements
+`
+
+`
+    let xhr = new XMLHttpRequest();
 `
