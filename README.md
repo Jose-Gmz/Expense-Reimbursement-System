@@ -1,5 +1,3 @@
-# Expense-Reimbursement-System
-
 # Expense Reimbursement System (JwA)
 
 ## Project Description
@@ -22,7 +20,6 @@ The Expense Reimbursement System (ERS) will manage the process of reimbursing em
 
 ## Features
 
-List of features ready and TODOs for future development
 * Sumbit reimbursements
 * Update reimbursements
 * Display employee specific reimbursements
@@ -30,6 +27,7 @@ List of features ready and TODOs for future development
 
 
 To-do list:
+* Statistics page.
 * Implement Spring Framework
 * Implement Angular Framework
 
@@ -46,6 +44,8 @@ To-do list:
    - Create 
 * Create a connection to MariaDB
   -Create Tables
+* Add Javalin to Maven project
+* 
    
   -------------------------
 (include git clone command)
@@ -64,7 +64,3 @@ To-do list:
 ## Contributors
 
 > Here list the people who have contributed to this project. (ignore this section, if its a solo project)
-
-## License
-
-This project uses the following license: [<license_name>](<link>).
