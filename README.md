@@ -40,27 +40,82 @@ To-do list:
    - Javalin
    - Maven
 * Start a Maven Project in Eclipse
-   - Create Models Package
-   - Create 
-* Create a connection to MariaDB
-  -Create Tables
-* Add Javalin to Maven project
-* 
+   - Add dependencies in pom.xml file
+   - javalin
    
-  -------------------------
-(include git clone command)
-(include all environment setup steps)
+   `
+   <dependency>
+			<groupId>io.javalin</groupId>
+			<artifactId>javalin</artifactId>
+			<version>3.13.11</version>
+	</dependency>
+   `
+   
+   - mariadb
+   
+   `
+   		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+   `
+   
+   - hibernate
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
 
-- All the `code` required to get started
-- Images of what it should look like
+   `
+		<dependency>
+    		<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>5.5.7.Final</version>
+		</dependency>
+   `
 
-## Usage
+   - jackson
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+   `
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+   `
 
-## Contributors
+* Create a connection to MariaDB
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
+`
+if (sessionFactory == null) {
+			Properties props = new Properties();
+			try {
+			FileReader connectionProp = new FileReader("src/main/resources/connection.properties");
+			props.load(connectionProp);
+			sessionFactory = new Configuration().configure()
+					.setProperty("hibernate.connection.url", "url")
+					.setProperty("hibernate.connection.username", props.getProperty("username"))
+					.setProperty("hibernate.connection.password" , props.getProperty("password"))
+					.buildSessionFactory();
+			}catch(Exception e) {
+				e.printStackTrace();			}
+		}
+		return sessionFactory.getCurrentSession();
+`
+
+  - Create Tables in mariaDB
+
+* Add Javalin to Maven project
+   
+   `
+      Javalin app = Javalin.create().start(8000);
+      app.after(ctx -> {
+    	   ctx.res.addHeader("Access-Control-Allow-Origin", "null");
+      });
+   `
+   
+   - Create end points.
+* Implement a front end with HTML,CSS and JavaScript.
+* Use Ajax to create XMLHttpRequests and utilizing javalin.
+`    let url = 'http://localhost:8000/getAllReimbursements'
+
+    let xhr = new XMLHttpRequest()
+`
